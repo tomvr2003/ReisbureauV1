@@ -40,11 +40,11 @@ include("./components/header.php");
 </div>
 
 <div class="top-6-title-container">
-    <h1 style="font-size: 40px;">Top 6 favoriete ontdekkingen</h1>
+    <h1 style="font-size: 40px;">Top 4 favoriete ontdekkingen</h1>
 </div>
 
 <?php
-    $query = "SELECT * FROM reizen LIMIT 6";
+    $query = "SELECT * FROM reizen LIMIT 4";
     $stmt = $conn->prepare($query);
     $stmt->execute();
     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {

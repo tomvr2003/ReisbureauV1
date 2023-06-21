@@ -8,7 +8,7 @@ $statement = $conn->query($sql);
 $reisbureauData = $statement->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
-<main style="height: 83vh">
+<main style="height: 100vh">
     <div id="admin-full-page">
         <div class="add-reis-container">
             <a href="./add-reis.php"><button class="adminpanel-button">Add Reis</button></a>
@@ -65,7 +65,7 @@ $reisbureauData = $statement->fetchAll(PDO::FETCH_ASSOC);
 
 <?php
 } else {
-    echo "<center><h1 style='margin-top: 50px;'>U moet admin rechten hebben om hier in te loggen</h1></center>";
+    echo "<center><h1 style='margin: 50px 0 70vh 0;'>U moet admin rechten hebben om hier in te loggen</h1></center>";
 }
 include("./components/footer.php");
 ?>
