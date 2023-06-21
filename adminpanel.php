@@ -14,6 +14,7 @@ $reisbureauData = $statement->fetchAll(PDO::FETCH_ASSOC);
             <a href="./add-reis.php"><button class="adminpanel-button">Add Reis</button></a>
             <a href="./boekingen.php"><button class="adminpanel-button">Alle boekingen</button></a>
             <a href="./inbox.php"><button class="adminpanel-button">Inbox</button></a>
+            <a href="./accounts.php"><button class="adminpanel-button">Accounts</button></a>
         </div>
         <table class="rwd-table">
             <tbody>
