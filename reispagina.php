@@ -14,14 +14,16 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
 if(isset($_POST['submit_button'])) {
     $user_id = $_SESSION["id"];
     $reis_id = $_GET["id"];
-    $datum = $_POST["datum"];
-  
-    $sql = "INSERT INTO boekingen (user_id, reis_id, datum) VALUES (:user_id, :reis_id, :datum)";
+    $begindatum = $_POST["begindatum"];
+    $einddatum = $_POST["einddatum"];
+    
+    $sql = "INSERT INTO boekingen (user_id, reis_id, begindatum, einddatum) VALUES (:user_id, :reis_id, :begindatum, :einddatum)";
     $statement = $conn->prepare($sql);
     $statement->execute([
         ":user_id" => $user_id,
         ":reis_id" => $reis_id,
-        ":datum" => $datum
+        ":begindatum" => $begindatum,
+        ":einddatum" => $einddatum
     ]);
     
     header("Location:./index.php");
@@ -54,7 +56,8 @@ if(isset($_POST['submit_button'])) {
         </div>
         <form action="reispagina.php?id=<?php echo $_GET['id'];?>" method="POST">
             <div class="reispagina-container-right-5">
-                <input type="date" min="2023-06-23" max="2024-06-23" name="datum" required>
+                <input type="date" min="2023-06-23" max="2024-06-23" name="begindatum" required>
+                <input type="date" min="2023-06-24" max="2024-06-24" name="einddatum" required>
             </div>
             <div class="reispagina-container-right-6">
                 <button type="submit" name="submit_button" class="reispagina-button">Boeken</button>

@@ -44,7 +44,8 @@ include("./components/header.php");
                             <h6 style="font-weight: 500;" class="top-6-des"><?php echo $row["reisinfo"]; ?></h6>
                         </div>
                         <div class="reis-info-6">
-                            <h5 style="font-weight: 500;" class="top-6-title">Vertrekdatum: <?php echo $row["datum"]; ?></h5>
+                            <h5 style="font-weight: 500;" class="top-6-title">Vertrekdatum: <?php echo $row["begindatum"]; ?></h5>
+                            <h5 style="font-weight: 500; margin-top: 0;" class="top-6-title">einddatum: <?php echo $row["einddatum"]; ?></h5>
                         </div>
                     <div class="top-6-box-right t6-box-padding">
                       <a href="annuleer.php?id=<?php echo $row['boekid']; ?>"><button style="background-color: #7189FF;">Annuleer</button></a>
